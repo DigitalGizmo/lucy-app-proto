@@ -1,0 +1,1153 @@
+/* --------------------------*/
+/* BASICS -------------------*/
+/* --------------------------*/
+/* ----- Colors -------------
+orange: #E37A06
+brick: darker 963803, lighter B64A0D
+yellow: E7BA1B, yellow text: FFC90C
+green: darker 6F8D1C, lighter 8BA612*/
+
+
+body {
+	margin: 0;
+	font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+ul, ol {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+p, li {
+	line-height: 1.3em;
+	font-weight: 400;
+}
+
+section.wireframe-wrapper {
+	padding: 0 5%;
+}
+
+@media screen and (min-width: 1400px) {/* for really large displays - larger than 1400px */
+	section.wireframe-wrapper {
+/*		padding: 0 15% 4em 15%;*/
+		max-width: 1000px;
+	}
+}
+
+header#header {
+  background-color: white;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+@media screen and (min-width: 800px) {/* for large displays */
+	header#header {
+	  height: 124px;
+	}
+}
+
+header#header h3 {
+	margin: 0.25em 0;
+}
+
+h1, h2, h3, h4 {
+	color: #303030;
+	font-weight: 600;
+}
+
+h1 {
+	font-size: 2em;
+	margin: 0;
+}
+
+@media screen and (min-width: 800px) {/* for large displays */
+	h1 {
+		font-size: 3em;
+	}
+}
+
+a:link {
+	color: #445284;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #5e5e5e;
+}
+
+a:hover {
+  color: #ff6f06;
+  text-decoration: underline;
+}
+
+
+/* --------------------------------- */
+/* LANDING PAGE -------------------- */
+/* --------------------------------- */
+.landing h2 {
+	margin-top: 0;
+}
+
+@media screen and (max-width: 799px) { /* displays smaller than 800px */
+	.landing p.wireframe-note {
+		background-color: rgba(227, 122, 6, 0.2);
+	}
+}
+
+@media screen and (min-width: 800px) { /* displays smaller than 800px */
+	.landing ul {
+		float: left;
+		width: 30%;
+	}
+
+	.landing p.wireframe-note {
+		background-color: rgba(227, 122, 6, 0.2);
+		margin-left: 32%;
+		width: 35%;
+	}
+}
+/* --------------------------------- */
+/* GLOBAL NAV ---------------------- */
+/* --------------------------------- */
+.global-nav {
+	position: relative;
+}
+
+.global-nav ul {
+	list-style: none;
+	margin: 0 0 .5em 0;
+	padding: 0;
+	display: block; /* don */
+}
+
+.global-nav ul li {
+	background-color: #f6f6f6;
+	display: inline-block;
+	font-size: .8em;
+	padding: 0.25em;
+}
+
+.global-nav a.hamburger {
+	display: none;
+}
+
+/* The following from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
+
+/* When the screen is less than 800 pixels wide, hide all global nav links 
+Show the icon/link that opens and closes the global nav */
+@media screen and (max-width: 800px) {/* small displays */
+	.global-nav ul { 
+		display: none;
+	}
+
+	.global-nav a.hamburger {
+		position: absolute;
+		top: -27px;
+		right: 30px;
+		display: block;
+	}
+}
+
+/* The "responsive" class is added to global-nav with JavaScript 
+when the user clicks the icon. This class makes global-nav 
+display the links vertically instead of horizontally */
+@media screen and (max-width: 800px) {/* small displays */
+	.global-nav.responsive ul {
+		background-color: #fff;
+		border: 1px solid #eaeaea;
+		display: block;
+		position: absolute;
+		right: 30px;
+		text-align: right;
+		top: 0px;
+	}
+
+	.global-nav.responsive ul li {
+		background-color: #fff;
+		display: block;
+		font-size: 1.25em;
+		font-weight: 300;
+		padding: 0.5em;
+	}
+}
+
+.fa {
+	font-size: 1.5em;/* for hamburger icon */
+}
+
+section.wrapper {
+	margin-top: 102px;
+}
+
+@media screen and (min-width: 800px) {/* for large displays */
+	section.wrapper {
+		margin-top: 160px;
+	}
+}
+
+/* --------------------------------- */
+/* MOMENT NAV ---------------------- */
+/* --------------------------------- */
+
+nav.moment-nav {/* for mini-nav */
+	overflow-x: scroll;
+	width: 100%;
+}
+
+nav.moment-nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
+}
+
+nav.moment-nav ul li {
+	background-color: #f2f2f2;
+	border: 1px solid #eaeaea;
+	display: inline-block;
+	font-size: .8em;
+	height: 50px;
+	margin: 0 2px;
+	padding: 0.25em;
+	text-align: center;
+	white-space: pre-wrap;
+	vertical-align: middle;
+	width: 80px;
+}
+
+nav.moment-nav ul li.selected {
+	background-color: lightgrey;
+}
+
+nav.moment-nav ul li a:link, nav.moment-nav ul li a:visited {
+	color: #5e5e5e;
+}
+
+nav.moment-nav ul li a:hover, nav.moment-nav ul li a:active {
+	color: #E37A06;
+	text-decoration: underline;
+}
+/* --------------------------------- */
+/* MOMENTS ------------------------- */
+/* --------------------------------- */
+.moment-header {
+	padding: 0 1em;
+}
+
+/* --------------------------------- */
+/* Moment Title Frames ------------- */
+/* --------------------------------- */
+
+.moment-title {
+	background-color: black;
+	margin-top: 101px; /* to accommodate header - works with #header */
+	position: relative;
+}
+
+@media screen and (min-width: 800px) { /* displays larger than 800px */
+	.moment-title {
+		margin-top: 125px;
+	}
+}
+
+.title-container {
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  width: 100%;
+}
+
+#horizontal-titles {
+/*	display: flex;*/
+/*	flex-direction: column;*/
+/*  resize: both;*/
+	white-space: nowrap;
+	scroll-snap-type: x mandatory;
+  overflow-y: hidden;
+  overflow-x: auto;
+/*  width: auto;*/
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.smooth-scroll {
+	scroll-behavior: smooth;
+}
+
+#horizontal-titles div.content-container section div.moment-title-block {
+	display: inline-block;
+	margin-left: 5vw;
+	margin-right: 5vw;
+  margin-bottom: 15em;
+	width: 90vw;
+	height: 100vh;
+	text-align: center;
+	vertical-align: top;
+	white-space: normal;
+	font-size: 1.2em;
+	scroll-snap-align: center;
+}
+
+@media screen and (min-width: 800px) { /* displays larger than 800px */
+	#horizontal-titles div.content-container section div.moment-title-block {
+		margin-left: 35vw;
+		margin-right: 35vw;
+    margin-bottom: 0;
+    width: 30vw;
+	}
+}
+
+@media (min-aspect-ratio: 2/1) {/* letterbox displays */
+	#horizontal-titles div.content-container section div.moment-title-block {
+		margin-left: 5vw;
+		margin-right: 55vw;
+		text-align: left;
+    margin-bottom: 0;
+		width: 40vw;
+		scroll-snap-align: none;
+	}
+}
+
+.content-container {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.moment-title-block div {
+  color: #FFC107;
+	text-shadow: 2px 2px 4px black;
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.25);
+  margin-top: 60vh;
+}
+
+@media screen and (min-width: 800px) { /* displays larger than 800px */
+	.moment-title-block div {
+	  margin-top: 1vh;	
+	}
+}
+
+.moment-title-block div h1 {
+  color: #FFC107;
+ 	font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1em;
+}
+
+.moment-title-block div p.story-intro {
+/*	font-weight: 600;*/
+	margin-top: 0;
+	padding: 0;
+}
+
+.moment-title-block div p.history-intro {
+	font-family: 'Cormorant Garamond', serif;
+	font-weight: 600;
+	font-style: italic;
+}
+
+/* links to next, previous, this moments */
+
+nav.moment-options ul {
+	list-style: none;
+	text-transform: uppercase;
+	font-size: .8em;
+}
+
+nav.moment-options ul li a svg path {
+	fill: #E7BA1B;
+}
+
+nav.moment-options ul li a svg path:hover {
+	fill: #ffc107;
+}
+
+nav.moment-options ul li.this-moment {
+	bottom: 5vh;
+	font-weight: 600;
+	left: 50%;
+	position: absolute;
+	text-align: center;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	width: 150px;
+}
+
+@media screen and (min-width: 800px) { /* displays larger than 800px */
+	nav.moment-options ul li.this-moment {
+		bottom: 18vh;
+	}
+}
+
+nav.moment-options ul li.this-moment a {
+	color: #E7BA1B;
+	letter-spacing: 0.075em;
+	text-shadow: 1px 1px 1px black;
+}
+
+/* hide next/previous links on mobile */
+nav.moment-options ul li.prev-moment, nav.moment-options ul li.next-moment {
+	display: none;
+}
+
+@media screen and (min-width: 800px) { /* displays larger than 800px */
+	nav.moment-options ul li.prev-moment, nav.moment-options ul li.next-moment {
+		display: unset;
+	}
+}
+
+nav.moment-options ul li.next-moment {
+	position: absolute;
+	top: 30vh;
+	right: 4vw;
+}
+
+nav.moment-options ul li.prev-moment {
+	position: absolute;
+	top: 30vh;
+	left: 6px;
+}
+
+/* ----------------------------------- */
+/* Scrolling Moment Story Frames ----- */
+/* ----------------------------------- */
+.moment-scroll {/* displays less than 800px */
+	background-color: black;
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: fit-content auto;
+	grid-gap: 0;
+	margin-top: 101px;
+	overflow: hidden;
+	z-index: 1;
+}
+
+@media screen and (min-width: 800px) {/* displays larger than 800px */
+	.moment-scroll {
+		margin-top: 125px;
+	}
+}
+
+/* ----- Images -------------------- */
+
+/* put the images in the only column */
+.image-panel {
+	grid-column: 1;
+	grid-row: 1;
+}
+
+/* make the image shorter for MOBILE: displays smaller than 800px */
+/* fixed container to keep image from scrolling */
+@media screen and (max-width: 799px) {
+	/* .image-panel div.image-panel-fixed {
+		Removing image-panel so it will also apply to moment-title  */
+	.image-panel-fixed {
+		height: 60vh;
+		width: 100%;
+		position: fixed;
+	}
+	/* no inner div version */
+	.image-panel-image { /* displays smaller than 800px */
+		height: 60vh;
+		width: 100%;
+ 		position: absolute;
+	}
+	/* the size has to be declared this third time! */
+	.image-panel-image svg {
+		height: 60vh;
+		width: 100%;
+	}
+	.image-panel-image img {
+		width: 100%;
+		height: 60vh;
+		object-fit: cover;    
+	}	
+}
+
+/* make the image full height for DESKTOP: displays larger than 800px */
+/* fixed container to keep image from scrolling */
+@media screen and (min-width: 800px) {
+	/* .image-panel div.image-panel-fixed {
+		Removing image-panel so it will also apply to moment-title  */
+	.image-panel-fixed {
+		height: calc(100vh - 125px);
+		width: 100%;
+		position: fixed;
+	}
+	/* no inner div version */
+	.image-panel-image {
+		width: 100%;
+		height: calc(100vh - 125px); 
+		position: absolute;
+	}
+	/* the size has to be declared this third time! */
+	.image-panel-image svg {
+		width: 100%;
+		height: calc(100vh - 125px);    
+	}	
+	.image-panel-image img {
+		width: 100%;
+		height: calc(100vh - 125px);
+		object-fit: cover;    
+	}	
+}
+
+/* make the image narrower for letterbox displays: displays with an aspect ratio above 3/2 */
+/* fixed container to keep image from scrolling */
+@media (min-aspect-ratio: 2/1) {
+	/* .image-panel div.image-panel-fixed {
+		Removing image-panel so it will also apply to moment-title  */
+	.image-panel-fixed {
+		width: auto;
+		left:50%;
+	}
+	/* no inner div version */
+	.image-panel-image {
+		width: auto;
+	}
+	/* the size has to be declared this third time! */
+	.image-panel-image svg {
+		width: auto;    
+	}	
+	.image-panel-image img {
+		width: auto;   
+	}	
+}
+
+/* ------ More Panel --------------- */
+.more-container {
+  border-radius: 0 3px 3px 0;
+	background-color: white;
+	font-size: .8em;
+	left: -285px;
+	line-height: 1.2em;
+	top: 15vh;
+	height: 340px;
+	width: 250px;
+	padding: 0 1em 1em 1em;
+	position: absolute;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  pointer-events: visible;
+}
+
+.more-container:hover {
+  left: 0px;
+}
+
+.more-tab {
+  background-color: #FF6F06;
+  border-radius: 0 0 3px 3px;
+	color: #fff;
+	font-weight: 600;
+  padding: 1.75em 1.5em 1.75em 2em;
+  position: absolute;
+  top: 20%;
+  left: 260px;
+  margin: 0;
+  text-align: center;
+	text-transform: uppercase;
+	clip-path: polygon(0% 50%,20% 20%,75% 20%,100% 50%,75% 80%,20% 80%);
+}
+
+.more-container p {
+	margin-top: 0;
+}
+
+.more-container ul {
+	list-style-type: disc;
+	padding-left: 2em;
+}
+
+.more-container ul li{
+	line-height: 1em;
+	padding-bottom: .3em;
+}
+
+.more-container h5, .more-container h3 {
+	color: #6F8D1C;
+	margin: 1.5em 0 0 0;
+	text-transform: uppercase;
+}
+
+.hotspot {
+    fill: orange;
+    fill-opacity: 0.1;
+    stroke-width: 2;
+    stroke: orange;
+    stroke-dasharray: 5;
+    stroke-opacity: 1;
+}
+
+.hotspot:hover {
+  fill: orange;
+  fill-opacity: 0.65;
+}
+
+.more-panel-fixed {/* is this in the right place? */
+	height: 60vh;
+	width: 100%;
+	position: fixed;
+  z-index: 30;
+  pointer-events: none;
+}
+
+/* ------ SVG Audio Icons --------------- */
+.audio-icons {
+  height: 50px;
+  left: 10px;
+  position: absolute;
+  top: 60vh;
+  width: 50px;
+  pointer-events: visible;
+}
+
+.audio-icons a g circle:hover {
+	fill: orange;
+	opacity: .70;
+}
+
+/* Don adding fake highlight */
+.audio-active a g circle {
+  fill: bisque;
+}
+
+#read-aloud {
+	margin-bottom: 1em;
+}
+
+.circle {
+	fill: orange;
+	opacity: .20;
+}
+
+.circle-stroke {
+  stroke: orange;
+	stroke-width: 4px;
+	fill: none
+}
+
+.dot {
+  fill: orange;
+  stroke-width: 0px;
+}
+
+.lines {
+  fill: none;
+  stroke: orange;
+}
+
+.lines-thick {
+  stroke-width: 4px;
+}
+
+.lines-thin {
+  stroke-width: 2px;
+}
+
+/* ---- Story Text -------------   */
+.story-frames { /* for MOBILE: displays smaller than 800px */
+	grid-column: 1;
+	grid-row: 1;
+	pointer-events: none;
+	z-index: 20;
+}
+
+.story-frames article.story {/* displays smaller than 800px */
+	margin-bottom: calc(100vh - 250px);
+	color: white;
+	font-size: 1.25rem;
+	text-align: center;
+	text-shadow: 1px 1px 1px black;
+}
+
+@media screen and (min-width: 800px) { /* displays larger than 800px */
+	.story-frames article.story {
+		font-size: 1.5rem;
+	  min-height: 10em;
+	}
+}
+
+.story p {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.story-frames article.story.center, .story-frames article.story.right, .story-frames article.story.left {
+	margin: 40vh 20vw 70vh 20vw;
+}
+
+@media screen and (min-width: 800px) { /* displays larger than 800px */
+	.story-frames article.story.right {
+		margin: 40vh 5vw 70vh 50vw;
+	}
+
+	.story-frames article.story.center {
+		margin: 40vh 20vw 70vh 20vw;
+	}
+
+	.story-frames article.story.left {
+		margin: 40vh 50vw 70vh 5vw;
+	}
+}
+
+@media (min-aspect-ratio: 2/1) {/* letterbox displays */
+	.story-frames article.story.center, .story-frames article.story.right, .story-frames article.story.left {
+		margin: 40vh 52vw 60vh 5vw;
+		text-align: left;
+	}
+}
+
+/* ----- Total More -------------------   */
+.total-more {
+	background-color: white;
+	grid-column: 1 / 3;
+	grid-row: 2;
+	padding: 0 0 6em 0;
+	z-index: 40;
+}
+
+.total-more h2, .total-more h3 {
+	color: #6F8D1C;
+}
+
+.total-more header {
+	background-color: #6F8D1C;
+	padding: 1em;
+	text-align: center;
+}
+
+.total-more header h1 {
+	color: #fff;
+	font-size: 2em;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+
+.total-more-essay {
+	float: none;
+	padding: 0 5%;
+}
+
+@media screen and (min-width: 800px) { /* displays larger than 800px */
+	.total-more-essay {
+		float: right;
+		width: 50%;
+		margin-left: 2em;
+		padding-right: 5%;
+	}
+}
+
+.total-more-essay ul.questions {
+	list-style-type: decimal;
+	padding-left: 1em;
+	padding-bottom: 3em;
+}
+
+.total-more-essay ul.questions li {
+	padding-bottom: .5em;
+}
+
+.total-more-list {
+	float: none;
+	padding-left: 5%;
+}
+
+@media screen and (min-width: 800px) { /* displays larger than 800px */
+	.total-more-list {
+		float: left;
+		padding-left: 5%;
+	}
+}
+
+.total-more ul {
+	list-style-type: none;
+}
+
+.total-more h3, .total-more h2 {
+	margin-bottom: .25em;
+	text-transform: uppercase;
+}
+
+/* ----------------------------------- */
+/* MODAL MORE WINDOWS ---------------  */
+/* ----------------------------------- */
+
+/* ------ General ------- */
+.hidden {
+  display: none;
+}
+
+.unhidden {
+  display: block;
+}
+
+#modal-overlay {
+  background: url(./assets/overlay.png) repeat;
+  cursor: pointer;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 99;
+}
+
+#modal-wrapper {
+  background-color: white;
+  border: 1px solid lightgrey;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);/* this isn't working on map--svg? */
+  margin-bottom: 6em;
+  overflow: auto;
+  padding: 1.5em;
+  position: relative;
+}
+
+/* JavaScript assigns this (or .hidden) to modal container */
+@media screen and (max-width: 799px) { /* displays larger than 800px */
+	.modal-basic {
+	  display: block;
+	  overflow-x: hidden;
+	  overflow-y: scroll;
+	  position: fixed;/* this positions the modal window relative to viewport, it won't scroll with the page */  
+	  z-index: 100;
+	  height: 100vh;
+	  width: 100vw;
+	  top: 100px;
+	}
+}
+
+@media screen and (min-width: 800px) { /* displays larger than 800px */
+	.modal-basic {
+	  bottom: 0;
+	  display: block;
+	  left: 0;
+	  margin: auto;
+	  overflow-x: hidden;
+	  overflow-y: scroll;
+	  position: fixed;/* this positions the modal window relative to viewport, it won't scroll with the page */  
+	  right: 0;
+	  top: 15vh;
+	  z-index: 100;
+	  max-height: 75vh;
+	  width: 70vw;
+	}
+}
+
+.modal-close {
+	position: absolute;
+	right:20px;
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+}
+
+.close { 
+  cursor:pointer;
+}
+
+.close:after, .close:before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  border-top: 2px solid #888;
+  position: absolute;
+  top: 6px;
+  right: -8px;
+  rotate: -45deg;
+}
+      
+.close:before {
+  right: 6px;
+  rotate: 45deg;
+}
+  
+.close:hover {	
+  opacity: 0.3;
+}
+
+.more-content h2, .more-content h4 {
+	margin: 0;
+}
+@media screen and (max-width: 799px) { /* displays smaller than 800px */
+	.more-content figure, .detail figure {
+	    margin: 0;
+	}
+}
+
+@media screen and (min-width: 800px) { /* displays larger than 800px */
+	.more-content figure, .detail figure {
+	  float: left;
+	  max-width: 50%;
+	  margin: 0 2em 0 0;
+	}
+}
+
+.more-content figure img, .detail figure img {
+	max-width: 100%;
+}
+
+.more-content figure figcaption, .detail figure figcaption {
+	color: gray;
+	font-size: .8em;
+}
+
+dl.evidence-info {
+	font-size: 1em;
+}
+
+dl.evidence-info dt {
+	color: gray;
+	float: left;
+	font-weight: 600;
+	margin-right: 1em;
+}
+
+/* ----------------------------------- */
+/* MENUS ----------------------------- */
+/* ----------------------------------- */
+
+.menu {
+	list-style-type: none;
+	width: 100vw;
+}
+
+@media screen and (min-width: 800px) { /* displays larger than 800px */
+	.menu {
+		width: 50vw;
+	}
+}
+
+.menu li {
+	margin-bottom: 1em;
+}
+
+.menu li a {
+	display: inline-block;
+	font-weight: bold;
+}
+
+/* supporting feature menus ----------- */
+ul.col-heads li, ul.col-content li.feature-title {
+	font-weight: 500;
+}
+
+@media screen and (max-width: 799px) { /* displays smaller than 800px */
+	ul.col-heads {
+		display: none;
+	}
+
+	ul.col-content {
+		border-top: 1px solid #eaeaea;
+		margin: 1em 0 .5em 0;
+		padding-top: 1em;
+	}
+
+	ul.col-content li {
+		display: block;
+		width: 100%;
+	}
+
+	li.feature-thumb img {
+		max-width: 80%;
+	}
+}
+
+@media screen and (min-width: 800px) { /* displays larger than 800px */
+	ul.col-heads {
+		display: block;
+		background-color: #f6f6f6;
+		margin-bottom: 1.5em;
+	}
+
+	ul.col-heads li, ul.col-content li {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	ul.col-content li {	
+		margin-bottom: 1.5em;
+	}
+
+	ul.col-content li {
+		border-top: 1px solid #eaeaea;
+	}
+
+	li.feature-thumb {
+		width: 15%;
+		padding-right: 2%;
+	}
+
+	li.feature-thumb img {
+		max-width: 100%;
+	}
+
+	li.feature-title {
+		font-weight: bold;
+		width: 15%;
+		padding-right: 2%;
+	}
+
+	li.feature-date {
+		width: 10%;
+		padding-right: 2%;
+	}
+
+	li.feature-type {
+		width: 15%;
+		padding-right: 2%;	
+	}
+
+	li.feature-blurb {
+		width: 60%;
+		padding-right: 2%;	
+	}
+
+	div.evidence ul li.feature-blurb {
+		width: 30%;
+	}
+}
+
+/* --------------------------------- */
+/* Detail Pages -------------------- */
+/* --------------------------------- */
+.detail h2 {
+	margin: 0;
+}
+
+.detail p.dates {
+	margin: 0.25em 0;
+}
+
+.about {
+	margin-top: 1em;
+	width: 100%;
+}
+
+.about h3 {
+	margin: 0;
+}
+
+.about p {
+	margin: 0 0 1em 0;
+}
+
+/* --------- Map ------------- */
+.map-wrapper {
+	position: relative;
+}
+
+.map-modal {
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (min-width: 800px) { /* displays larger than 800px */
+	.map-modal { 
+	  overflow-y: scroll;
+	  position: absolute;  
+		z-index: 100;
+	  max-height: 25vh;
+	  width: 30vw;
+	}
+}
+
+.map-intro-text {
+  background-color: rgba(256, 256, 256, 0.3);
+  left: 60%;
+  padding: 1em;
+	position: absolute;
+  top: 10%;
+  width: 35%;
+}
+
+.map-intro-text h3, .map-intro-text p, .map-modal .more-content h3, .map-modal .more-content p {
+	margin: 0;
+}
+
+.map-modal .more-content, .map-intro-text {
+	font-size: .75em;
+}
+
+@media screen and (min-width: 800px) { /* displays larger than 800px */
+	.map-modal .more-content, .map-intro-text {
+		font-size: 1em;
+	}
+}
+
+.road-labels {
+	fill: #4f4f4f;
+	font-family: 'Fira Sans Condensed', sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+}
+
+#houses {
+	fill: #ada38e;
+	stroke-width: 0;
+}
+
+.house-hilite {
+	fill: #FF6F06;
+}
+
+#map-nav rect.map-selected {
+  fill: #6F8D1C;
+}
+
+#map-nav a:hover {
+	text-decoration: none;
+}
+#map-nav a:hover rect {
+  fill: #6F8D1C;
+}
+/*#map-nav a:hover rect, #map-nav a:hover tspan {
+	filter: 
+    invert(1)
+    brightness(1);
+}*/
+
+#map-nav rect {
+	fill: #E37A06;
+}
+
+#map-nav tspan {
+	fill: #ffffff;
+	font-family: 'Fira Sans Condensed', sans-serif;
+	font-size: 2em;
+}
+
+.compass text  {
+  fill: #8c8270;
+  font-family: FiraSansCondensed-Regular, 'Fira Sans Condensed';
+  font-size: 16px;
+  letter-spacing: .05em;
+}
+
+.cls-6 {
+  fill: #cbbcac;
+}
+
+.cls-7 {
+  fill: #e1d8ce;
+}
+
+.cls-8 {
+  fill: #a89074;
+}
+
+.wireframe-note {
+	border: 2px dashed #E37A06;
+	padding: .5em;
+	margin: -1em null 0 null;
+	width: fit-content;
+}
