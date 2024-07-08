@@ -10,6 +10,8 @@
             <li><a data-sveltekit-reload href="/topics/">Topics &amp; Ideas</a></li>
             <li><a data-sveltekit-reload href="/maps/">Where in the World?</a></li>
             <li><a data-sveltekit-reload href="/">When?</a></li>
+            <li>&nbsp;</li>
+            <li><a data-sveltekit-reload href="/">Credits</a></li>
         </ul>
 
         <p class="wireframe-note">WIREFRAME ONLY - NOT YET DESIGNED<br>
