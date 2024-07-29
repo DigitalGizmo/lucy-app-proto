@@ -24,16 +24,23 @@
     <p>
       The <i>Lucy Terry Prince</i> website project grew out of PVMA’s African Americans in Rural New England project. Starting in 1994, the project has included an illustrated booklet Lucy Terry Prince: Singer of History by PVMA’s librarian, artist-in-residencies, African American history featured on our websites, installations memorializing African Americans, printed interpretive material of 23 African American sites in Deerfield, Black history exhibits, Juneteenth concerts, events, student and teacher programs, and an extensive database of early African American presence in the region.      
     </p>
-    <p>
-      &copy; 2024 <br>
-      Any views, findings, conclusions, or recommendations expressed in this prototype website do not necessarily represent those of the National Endowment for the Humanities.
-    </p>
+
+    <ul class="col-content">
+      <li class="feature-thumb">
+        <a href='https://deerfield-ma.org/' target="_blank">
+          <img src="https://lucy-proto.deerfield-ma.org/assets/credits/PVMAJan2023.jpg" alt="PVMA logo">
+        </a>
+      </li>
+      <li class="feature-blurb">
+        &copy; 2024 <br>
+        Any views, findings, conclusions, or recommendations expressed in this prototype website do not necessarily represent those of the National Endowment for the Humanities.
+      </li>
+    </ul>
 
     <ul class="col-content">
       <li class="feature-thumb">
         <a href='https://www.neh.gov' target="_blank">
-          <img 
-            src="https://lucy-proto.deerfield-ma.org/assets/credits/NEH-Preferred-Seal8202024.jpg" alt="NEH logo">
+          <img src="https://lucy-proto.deerfield-ma.org/assets/credits/NEH-Preferred-Seal8202024.jpg" alt="NEH logo">
         </a>
       </li>
       <li class="feature-blurb">
