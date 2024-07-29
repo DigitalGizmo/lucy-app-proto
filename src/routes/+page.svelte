@@ -10,7 +10,6 @@
             <li><a data-sveltekit-reload href="/topics/">Topics &amp; Ideas</a></li>
             <li><a data-sveltekit-reload href="/maps/">Where in the World?</a></li>
             <li><a data-sveltekit-reload href="/when/">When?</a></li>
-            <li>&nbsp;</li>
             <li><a data-sveltekit-reload href="/credits/">Credits</a></li>
         </ul>
 
