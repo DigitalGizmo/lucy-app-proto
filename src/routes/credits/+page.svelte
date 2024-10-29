@@ -71,6 +71,7 @@
         Dr. Christy Clark-Pujara, co-lead scholar; Professor of History, University of Wisconsin<br>
         Dr. Richard Bailey, Associate Professor of History, Canisius College<br>
         Dr. Antonio Bly, Associate Professor of History, Sacramento State University<br> 
+        Dr. Thomas Doughton, senior lecturer, Center for Interdisciplinary and Special Studies at the College of the Holy Cross (deceased February 2024)<br>
         Dr. Jared Hardesty, Associate Professor of History at Western Washington University<br>
         Dr. Tom Scheinfeldt, Professor of Digital Humanities, Department of Digital Media & Design/Department of History, University of Connecticut        
       </li>
