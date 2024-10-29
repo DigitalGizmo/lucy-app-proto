@@ -1,6 +1,6 @@
 <script>
     import MainNav from "$lib/MainNav.svelte";
-    export let data;
+    // export let data;
 </script>
   
 <section class="wireframe-wrapper">
